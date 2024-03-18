@@ -1,0 +1,51 @@
+
+	1.
+        a) Class and Object													- 				done
+        b) Class constructor													- 				done
+        c) Polymorphism															- 				done
+        d) Method overloading													- 				done
+        e) Method overriding													- 				done
+        f) Inheritance															- 				done
+        g) Interface																-				done
+        h) Abstract class														-				done
+        i) Abstraction and Encapsulation									-				done
+        j) Composition and Aggregation										-				done
+        k) Generalization and Specialization								-				done
+        
+        
+    2.
+    	  a) concatenate
+    	  b) length
+    	  c) uppercase and lowercase
+    	  d) substring
+    	  e) split a sentence
+    	  f) reverse a string 
+    	  
+    	  - done with all the above operations !!!!
+    	  
+	 3.
+	 
+	 	  a) Create a new directory - using File object
+	 	  b) Create a new text file and write content to it - using File and FileWriter
+	 	  c) Read the content from an existing text file - using FileReader
+	 	  d) Append new content to an existing text file - using 
+        
+        - done with all the operations!!!!!
+        
+        
+	 4.
+	 	   a) Create and start multiple threads.																	-			done
+	 	   b) Synchronize threads to avoid race conditions and ensure data consistency.				-			done
+	 	   c) Use wait() and notify() to implement thread communication.									-			done
+	 	   d) Implement producer-consumer problem using thread synchronization								-			done
+        	e) Use sleep() to pause threads for a specified duration.
+        											-			done
+        	f) Demonstrate thread interruption and thread termination										-			done	
+        	g) Use thread pools to manage a group of threads efficiently										-			done
+        	h) Implement thread synchronization using locks and conditions.										-			done
+        	i) Demonstrate deadlock and ways to avoid it.												-			done
+        	j) Use thread-local variables to handle thread-specific data.												-			done			
+        									
+        
+        
+        

@@ -1,0 +1,61 @@
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}
+
+/* *
+{
+    margin: 0;
+} */
+
+/* .heading
+{
+    text-align: center;
+} */
+
+.main-container
+{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    /* Add a border to the element */
+    border: 2px solid #ccc; 
+    /* Add a shadow to the border */
+    box-shadow:  0 0 4px rgba(0, 0, 0, 0.5);
+   
+}
+
+.image
+{
+    width: 400px;
+    height: auto;
+}
+
+.designation
+{
+    font-size: 20px;
+}
+
+.button
+{
+    background-color: black;
+    margin: 0;
+    height: 3.5rem;
+    /* padding: 20px; */
+}
+
+a
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    /* making use of calc function to obtain correct measurement to make it center   */
+    padding: 14px 0;
+    display: block;
+    height: 1.5rem;
+    font-weight: 500;
+}

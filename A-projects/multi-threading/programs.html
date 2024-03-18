@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object-class-programs</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./google-code-prettify/prettify.css"
+    />
+    <style>
+      /* Background color style */
+      pre.prettyprint {
+        background-color: #eee;
+        padding: 2px;
+        border: 1px solid #888;
+      }
+    </style>
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body onload="PR.prettyPrint()">
+    <!-- navigation button -->
+    <span class="nav-btn" id="nav-btn">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </span>
+
+    <!-- navigation bar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-header">
+        <span class="nav-close" id="nav-close">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <ul class="nav-items">
+        <!-- <span class="navbar-links">Notes Navigator</span>
+        <br />
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#object-class" class="nav-link">Object Class</a></li>
+        <li><a href="#tostring" class="nav-link">toString() Method</a></li>
+        <li>
+          <a href="#hashcode" class="nav-link">hashCode() Method</a>
+        </li>
+        <li><a href="#equals" class="nav-link">equals() Method</a></li>
+        <li><a href="#clone" class="nav-link">clone() Method</a></li>
+        <li>
+          <a href="#finalize" class="nav-link">finalize() Method</a>
+        </li>
+        <li><a href="#wait" class="nav-link">wait() Method</a></li>
+        <li><a href="#notify" class="nav-link">notify() Method</a></li>
+        <li>
+          <a href="#notify-all" class="nav-link">notifyAll() Method </a>
+        </li> -->
+        <span class="navbar-links">Resources Navigator</span>
+        <br />
+
+        <li><a href="./index.html" class="nav-link">notes</a></li>
+        <li><a href="./programs.html" class="nav-link">programs</a></li>
+        <li><a href="./points.html" class="nav-link">points</a></li>
+        <li>
+          <a href="./interview-qa.html" class="nav-link">interview QA</a>
+        </li>
+        <li>
+          <a href="./assignment-qa.html" class="nav-link">assignment QA</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- main navigator -->
+    <header class="header-nav">
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+          <div class="portrait-desc">
+            <h1>Vijay Kumar K Y</h1>
+            <h2>Software Developer and Corporate Trainer</h2>
+          </div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> Language Fundamentals </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> static-members </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> non-static-members </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> inheritence </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> scanner-class </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> objects-count </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              packages-and-access-levels
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> encapsulation </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> type-casting </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> polymorphism </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> super-this-in-methods </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> abstraction </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> interfaces </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> command-line-arguments</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> final-keyword </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> exception-handling </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> asserstion </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> enum </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> wrapper-classes </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> string </a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link">
+              string-buffer-and-string-builder
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> multi-threads </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> object class </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Generics</a>
+          </li>
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> collection API </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> File Handling </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> Annotations</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Java 8.0 Features </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header -->
+    <header class="header">
+      <div class="banner">
+        <h1 class="banner-title">Multi-Threading in java - programs</h1>
+      </div>
+    </header>
+
+    <!-- end of header -->
+    <!-- content-divider -->
+    <div class="content-divider"></div>
+    <!-- end of content divider -->
+
+    <!-- notes body start -->
+    <main class="main">
+      <section class="class-notes">
+        <!-- <h2 class="subject-title">Subject Title</h2> -->
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 1</h3>
+          <pre class="prettyprint linenums">
+            public class M2 {
+              public static void main(String[] args) {
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println("loop1: " + i);
+                }
+                // after completing first for loop
+                for (int i = 20; i <= 30; i++) {
+                  System.out.println("loop2: " + i);
+                }
+                // after completing second for loop
+                for (int i = 40; i <= 50; i++) {
+                  System.out.println("loop3: " + i);
+                }
+              }
+            }
+            // only one thread executing this program so sequential output.
+             </pre
+          >
+          <br />
+
+          <pre class="output"><b>o/p: </b>
+
+            loop1: 1
+            loop1: 2
+            loop1: 3
+            loop1: 4
+            loop1: 5
+            loop1: 6
+            loop1: 7
+            loop1: 8
+            loop1: 9
+            loop1: 10
+            loop2: 20
+            loop2: 21
+            loop2: 22
+            loop2: 23
+            loop2: 24
+            loop2: 25
+            loop2: 26
+            loop2: 27
+            loop2: 28
+            loop2: 29
+            loop2: 30
+            loop3: 40
+            loop3: 41
+            loop3: 42
+            loop3: 43
+            loop3: 44
+            loop3: 45
+            loop3: 46
+            loop3: 47
+            loop3: 48
+            loop3: 49
+            loop3: 50
+		  </pre>
+        </article>
+
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 2</h3>
+          <pre class="prettyprint linenums">
+            //first approach of creating a thread
+            class A extends Thread {
+              @Override
+              public void run() {
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println("first thread: " + i);
+                }
+              }
+            }
+            
+            class B extends Thread {
+              @Override
+              public void run() {
+                for (int i = 20; i <= 30; i++) {
+                  System.out.println("second thread: " + i);
+                }
+              }
+            }
+            
+            public class M3 {
+              public static void main(String[] args) {
+            
+                // while creating an object to A class for Thread is creating.
+                // bcz A is a subclass to Thread now.
+                // we can call class A is specialized to Thread.
+                // while creating a thread it is getting all the default properties.
+                A a1 = new A();// new thread got created and having all the properties but this not knowing to
+                        // the thread scheduler
+                // we cant use the thread straight away.
+                // after creating a thread we have to call start method.
+                // we should not call run method even though we have overrided run method.
+                // start method will take care of giving a call to run method internally
+                // start method also inherited method from the Thread class.
+                // totally three threads are involved in the execution.
+                // main thread is parent
+                // thread A is child
+                // main thread only calling child thread
+                // child thread goes to execute run method and main thread continues to execute
+                // the main method.
+                // processor allocating to all three threads.
+                // some milsec to each thread.
+                // there is a concept of thread scheduler, it is taking care of scheduling
+                // processor time to all the registered threads.
+                // thread scheduler assign available processor time for each thread randomly
+                // thats why we cant able to predict the o/p order.
+                // generally execution is from top to bottom if execution is from top to bottom
+                // o/p also from top to bottom.
+                // some times we require o/p simultaneously, one from one block another from
+                // another block
+                // customer might require output like that.
+                // example of multi threads simultaneously audio and video playing.
+                // assign one thread for one o/p another thread for another o/p
+                // thread is a piece of code executing independent and parallel to another
+                // thread.
+                // The Java Virtual Machine allows an application to have multiple threads of
+                // execution running concurrently.
+                // to develop a thread in java there are two approaches
+                // 1. extending Thread class
+                // 2. implementing Runnable interface.
+                // main thread only creating child threads, registering with the thread
+                // scheduler and allocating to execute run method.
+                a1.start();// while calling start method it is registering newly created thread with the
+                      // thread scheduler.
+                B b1 = new B();
+                b1.start();
+                // after this point main thread continues to execute remaining portion of the
+                // main thread.
+                // by the time two child threads also went into execute corresponding run
+                // methods.
+                for (int i = 300; i <= 400; i++) {
+                  System.out.println("main thread: " + i);
+                }
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            first thread: 1
+            first thread: 2
+            first thread: 3
+            first thread: 4
+            first thread: 5
+            first thread: 6
+            main thread: 30
+            main thread: 31
+            main thread: 32
+            main thread: 33
+            main thread: 34
+            main thread: 35
+            main thread: 36
+            main thread: 37
+            main thread: 38
+            main thread: 39
+            first thread: 7
+            main thread: 40
+            second thread: 20
+            first thread: 8
+            first thread: 9
+            first thread: 10
+            second thread: 21
+            second thread: 22
+            second thread: 23
+            second thread: 24
+            second thread: 25
+            second thread: 26
+            second thread: 27
+            second thread: 28
+            second thread: 29
+            second thread: 30
+					  </pre>
+        </article>
+
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 3</h3>
+          <pre class="prettyprint linenums">
+            //second approach of creating a thread(best)
+            //Runnable is an interface which is available in java.lang package.
+            //it contains only one single method i,e run().
+            //single method interfaces are also called as functional interfaces.
+            //now C class contains Object class members and Runnable interface members
+            //C class doesn't have methods like Thread class start() and some other methods
+            //now C is subclass to both Object class and Runnable interface.
+            class C implements Runnable {
+              @Override
+              public void run() {
+                for (int i = 21; i <= 30; i++) {
+                  System.out.println("first child: " + i);
+                }
+              }
+            }
+            
+            class D implements Runnable {
+              @Override
+              public void run() {
+                for (int i = 41; i <= 50; i++) {
+                  System.out.println("second child: " + i);
+                }
+              }
+            }
+            
+            public class M4 {
+            
+              public static void main(String[] args) {
+                // while creating object to C thread is not creating
+                C c1 = new C();
+                // once we create an object to C, create an object to Thread
+                // by supplying reference of C to the constructor of Thread.
+                // Thread class has some constructors among them one is taking runnable type.
+                // c1 is a C type and it is runnable type.
+                Thread t1 = new Thread(c1);// creating child thread
+                t1.start();
+            
+                D d1 = new D();
+                Thread t2 = new Thread(d1);// creating child thread
+                t2.start();
+            
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println("main thread: " + i);
+                }
+              }
+            }
+            
+        </pre
+          >
+
+          <pre class="output"><b>o/p: </b>
+            first child: 21
+            first child: 22
+            main thread: 1
+            main thread: 2
+            main thread: 3
+            second child: 41
+            first child: 23
+            first child: 24
+            first child: 25
+            first child: 26
+            second child: 42
+            main thread: 4
+            main thread: 5
+            main thread: 6
+            main thread: 7
+            second child: 43
+            first child: 27
+            second child: 44
+            main thread: 8
+            main thread: 9
+            second child: 45
+            first child: 28
+            first child: 29
+            first child: 30
+            second child: 46
+            main thread: 10
+            second child: 47
+            second child: 48
+            second child: 49
+            second child: 50
+								  </pre>
+        </article>
+
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 4</h3>
+          <pre>
+            //E is a sub class to Thread from Thread class several methods are inheriting.
+//overriding run() method.
+class E extends Thread {
+	@Override
+	public void run() {
+		for (int i = 1; i <= 10; i++) {
+			// getName() is the method available in Thread class
+			System.out.println(getName() + ":" + i);
+		}
+	}
+}
+
+public class M5 {
+
+	public static void main(String[] args) {
+
+		// we are creating two objects of E class i,e two threads E class
+		// both the threads are allocated to execute the run method of class E
+		// both the threads are using different copies of same run method.
+		E e1 = new E();
+		e1.start();
+		// main thread receives unhandled exception object
+		// main thread only terminating abnormally, not the child threads.
+		// if main thread is terminated remaining portions of the main thread will not
+		// be executed.
+		// e1.start();//Exception(ITSE(IllegalThreadStateException)) one thread can be
+		// started only one time, one thread cant be started second time.
+
+		E e2 = new E();
+		e2.start();
+
+		for (int i = 51; i <= 60; i++) {
+			// in M5 there is no getName method
+			// we need to get one thread reference to the current thread
+			// in order to get the reference to current thread go for Thread.currentThread()
+			// if this statement executed by main thread then main thread reference will be
+			// returning
+			// through that reference call getName() method
+			// this can be done on any thread
+			System.out.println(Thread.currentThread().getName() + ":" + i);
+		}
+
+	}
+
+}
+
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            main:51
+            main:52
+            main:53
+            main:54
+            main:55
+            main:56
+            main:57
+            main:58
+            main:59
+            Thread-1:1
+            Thread-0:1
+            Thread-0:2
+            Thread-0:3
+            Thread-0:4
+            Thread-0:5
+            Thread-0:6
+            Thread-0:7
+            Thread-0:8
+            Thread-1:2
+            Thread-1:3
+            main:60
+            Thread-1:4
+            Thread-1:5
+            Thread-1:6
+            Thread-1:7
+            Thread-1:8
+            Thread-1:9
+            Thread-1:10
+            Thread-0:9
+            Thread-0:10
+        </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 5</h3>
+          <pre>
+            class F implements Runnable {
+              @Override
+              public void run() {
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println(Thread.currentThread().getName() + ":" + i);
+                }
+              }
+            }
+            
+            public class M6 {
+            
+              public static void main(String[] args) {
+                F f1 = new F();
+                Thread t1 = new Thread(f1);
+                t1.start();
+            
+                // we can create multiple Thread object by using same F object
+                Thread t2 = new Thread(f1);
+                // both the threads are going to run same method of F
+                // but one is using one copy of run() method another is using another copy of
+                // run() method
+                // we can create multiple threads by using same Runnable object.
+                t2.start();
+            
+                for (int i = 51; i <= 60; i++) {
+                  System.out.println(Thread.currentThread().getName() + ":" + i);
+                }
+              }
+            }
+            // for the first child thread the default name is starts with Thread:0
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            main:51
+            main:52
+            main:53
+            main:54
+            main:55
+            main:56
+            main:57
+            main:58
+            main:59
+            main:60
+            Thread-1:1
+            Thread-1:2
+            Thread-1:3
+            Thread-0:1
+            Thread-0:2
+            Thread-1:4
+            Thread-1:5
+            Thread-1:6
+            Thread-1:7
+            Thread-1:8
+            Thread-1:9
+            Thread-0:3
+            Thread-1:10
+            Thread-0:4
+            Thread-0:5
+            Thread-0:6
+            Thread-0:7
+            Thread-0:8
+            Thread-0:9
+            Thread-0:10
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 6</h3>
+          <pre>
+            public class M8 {
+              public static void main(String[] args) {
+                // executed by main thread
+                Thread t1 = Thread.currentThread();
+                // reading default properties of main thread
+                System.out.println(t1.getName());
+                System.out.println(t1.isDaemon());
+                System.out.println(t1.getId());
+                System.out.println(t1.getPriority());
+              }
+            }
+            /*
+             * we can change the name of a thread
+             * Daemon thread is thread which is purely depending on parent thread.
+             * when parent is leaving from the execution daemon also leaving from the
+             * execution.
+             * even though daemon thread having some more execution.
+             * The opposite of Daemon thread is user thread even though parent thread is
+             * leaving from the execution, child finishing its execution.
+             * by default in java we get all the threads as user threads only.
+             * user thread is not Daemon thread.
+             * any thread can be converted user to daemon and daemon to user before calling
+             * the start method.
+             * main thread cant be converted into daemon, bcz its already started by the
+             * JVM.
+             * priority is an integer number from 1 to 10
+             * 1 is min, 5 is normal, 10 is max priority.
+             * the default priority of the main thread is normal priority.
+             * we just make a request to thread scheduler through priority
+             * we cant say every time only high priority thread only executes.
+             * it depends on the thread scheduler. but most of the times it considers
+             * the request.
+             * every thread will be having a unique id. particular thread can be referred
+             * through its id. two threads will not be having the same id.
+             * id is a long number and random.we just read the id but we cant modify.
+             */
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            main
+            false
+            1
+            5
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 7</h3>
+          <pre>
+            class M10 
+          {
+            public static void main(String[] args)
+            {
+              Thread t1 = Thread.currentThread();
+              //we can change the name of any thread including the main thread
+              System.out.println(t1.getName());
+              t1.setName("a new name to main thread");
+              System.out.println(t1.getName());
+            }
+          }
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            main
+            a new name to main thread
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 8</h3>
+          <pre>
+            public class M11 
+          {
+            public static void main(String[] args)
+            {
+              Thread  t1 = Thread.currentThread();
+              System.out.println(t1.isDaemon());
+              //before starting only we can convert it to daemon 
+              //trying to convert after starting resulting in Exception.
+              //RE - ITSE
+              t1.setDaemon(true);
+              System.out.println(t1.isDaemon());
+            }
+          }
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            false
+            Exception in thread "main" java.lang.IllegalThreadStateException
+                    at java.lang.Thread.setDaemon(Thread.java:1364)
+                    at M11.main(M11.java:10)
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 9</h3>
+          <pre>
+            public class M12
+          {
+            public static void main(String[] args)
+            {
+              Thread  t1 = Thread.currentThread();
+              System.out.println(t1.getPriority());
+              //we can change the priority after starting no issues.
+              //but change is allowed b/w 1 to 10
+              t1.setPriority(10);
+              System.out.println(t1.getPriority());
+            }
+
+          }
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            5
+            10
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 10</h3>
+          <pre>
+            class K extends Thread {
+              @Override
+              public void run() {
+                System.out.println("from run method of K class");
+            
+                System.out.println("child thread priority: " + this.getPriority());
+                System.out.println("from child: " + this.getName());
+              }
+            }
+            
+            public class M14 {
+              public static void main(String[] args) {
+                K k1 = new K();
+                k1.start();// two threads are involved
+                System.out.println(k1.getName());
+                k1.setName("first child");
+                System.out.println(k1.getName());
+                Thread t1 = Thread.currentThread();
+                System.out.println("main thread priority: " + t1.getPriority());
+                System.out.println("from main: " + t1.getName());
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            Thread-0
+            first child
+            from run method of K class
+            main thread priority: 5
+            child thread priority: 5
+            from main: main
+            from child: first child
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 11</h3>
+          <pre>
+            class N implements Runnable {
+              @Override
+              public void run() {
+                System.out.println("-----------------------------");
+              }
+            }
+            
+            public class M17 {
+              public static void main(String[] args) {
+                N obj = new N();
+                // several constructors are available
+                // reference to the runnable, name to the thread
+                Thread t1 = new Thread(obj, "my first thread");
+                t1.start();
+                System.out.println(t1.getName());
+                t1.setName("first child");
+                System.out.println(t1.getName());
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            my first thread
+            first child
+            -----------------------------
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 12</h3>
+          <pre>
+            class Q extends Thread {
+              @Override
+              public void run() {
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println(i);
+                }
+              }
+            }
+            
+            public class M19 {
+              public static void main(String[] args) {
+                Q q1 = new Q();
+                q1.start();
+                System.out.println("done");
+              }
+            }
+            
+            /*
+             * - child thread is the user thread. user thread is not depending on its
+             * parent.
+             */
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            done
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 13</h3>
+          <pre>
+            class R extends Thread {
+              @Override
+              public void run() {
+                for (int i = 1; i <= 100; i++) {
+                  System.out.println(i);
+                }
+              }
+            }
+            
+            public class M20 {
+              public static void main(String[] args) {
+                R r1 = new R();
+                r1.setDaemon(true);
+                r1.start();
+                System.out.println("done");
+              }
+            }
+            /*
+             * whenever parent is leaving child also leaving from the execution
+             * because child is a daemon thread.
+             * we can convert a thread to daemon before starting.
+             * -child thread life depends on the parent thread life
+             */
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            done
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            11
+            12
+            13
+            14
+            15
+            16
+            17
+            18
+            19
+            20
+            21
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 14</h3>
+          <pre>
+            class S extends Thread {
+              @Override
+              public void run() {
+                for (int i = 1; i <= 100; i++) {
+                  System.out.println(i);
+                }
+              }
+            }
+            
+            public class M21 {
+              public static void main(String[] args) {
+                S s1 = new S();
+                s1.start();
+                try {
+                  // main thread keeps on waiting for the s1 to finish.
+                  // after starting it going to the waiting state keeps on waiting till child
+                  // thread completely gets over.
+                  // once the child thread gets over it will resume back.
+                  // main is calling join on s1.
+                  s1.join();
+                } catch (InterruptedException ex) {
+                  ex.printStackTrace();
+                }
+            
+                System.out.println("done");
+                System.out.println("done");
+                System.out.println("done");
+                System.out.println("done");
+                System.out.println("done");
+              }
+            }
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            11
+            12
+            13
+            14
+            15
+            16
+            17
+            18
+            19
+            20
+            21
+            22
+            23
+            24
+            25
+            26
+            27
+            28
+            29
+            30
+            31
+            32
+            33
+            34
+            35
+            36
+            37
+            38
+            39
+            40
+            41
+            42
+            43
+            44
+            45
+            46
+            47
+            48
+            49
+            50
+            51
+            52
+            53
+            54
+            55
+            56
+            57
+            58
+            59
+            60
+            61
+            62
+            63
+            64
+            65
+            66
+            67
+            68
+            69
+            70
+            71
+            72
+            73
+            74
+            75
+            76
+            77
+            78
+            79
+            80
+            81
+            82
+            83
+            84
+            85
+            86
+            87
+            88
+            89
+            90
+            91
+            92
+            93
+            94
+            95
+            96
+            97
+            98
+            99
+            100
+            done
+            done
+            done
+            done
+            done
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 15</h3>
+          <pre>
+            public class M22 {
+              public static void main(String[] args) {
+                System.out.println("main begin");
+                for (int i = 1; i <= 10; i++) {
+                  System.out.println(i);
+                  try {
+                    // sleep method is a static method
+                    Thread.sleep(2000);
+                  } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                  }
+                }
+            
+                System.out.println("main end");
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            main begin
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            main end
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 16</h3>
+          <pre>
+            class V extends Thread {
+              @Override
+              public void run() {
+                System.out.println("run begin");
+                Util.sleep(20000);
+                System.out.println("run end");
+                System.out.println("run end");
+                System.out.println("run end");
+                System.out.println("run end");
+              }
+            }
+            
+            public class M26 {
+              public static void main(String[] args) {
+                System.out.println("main begin");
+                V obj = new V();
+                obj.start();
+                Util.sleep(2000);
+                // sleeping thread can be interrupted
+                // when the thread is in sleep if we call interrupt coming away from the sleep
+                // with the exception
+                obj.interrupt();
+            
+                System.out.println(Thread.interrupted());
+                System.out.println("main end");
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            run begin
+            false
+            main end
+            Sleeping got interrupted and Exception handled successfully, flow is normal
+            java.lang.InterruptedException: sleep interrupted
+                    at java.lang.Thread.sleep(Native Method)
+                    at Util.sleep(Util.java:9)
+                    at V.run(M26.java:5)
+            run end
+            run end
+            run end
+            run end
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 17</h3>
+          <pre>
+            class W extends Thread {
+              @Override
+              public void run() {
+                System.out.println("run begin");
+                int i = 10 / 0;
+                System.out.println("run end");
+              }
+            }
+            
+            public class M27 {
+              // main thread executes succesfully
+              // only child thread received unhandled exception object child thread only
+              // terminating
+              public static void main(String[] args) {
+                W obj = new W();
+                obj.start();
+                try {
+                  Thread.sleep(3000);
+                } catch (Exception e) {
+                  e.printStackTrace();
+                }
+                for (int i = 1; i <= 50; i++) {
+                  System.out.println(i);
+                }
+                System.out.println("main end");
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            run begin
+            Exception in thread "Thread-0" java.lang.ArithmeticException: / by zero
+                    at W.run(M27.java:5)
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            11
+            12
+            13
+            14
+            15
+            16
+            17
+            18
+            19
+            20
+            21
+            22
+            23
+            24
+            25
+            26
+            27
+            28
+            29
+            30
+            31
+            32
+            33
+            34
+            35
+            36
+            37
+            38
+            39
+            40
+            41
+            42
+            43
+            44
+            45
+            46
+            47
+            48
+            49
+            50
+            main end
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 18</h3>
+          <pre>
+            class X extends Thread {
+              X() {
+                start();
+              }
+            
+              @Override
+              public void run() {
+                System.out.println("run begin");
+                System.out.println("run end");
+              }
+            }
+            
+            public class M28 {
+              public static void main(String[] args) {
+                // while creating the thread itself it is starting in the constructor
+                // we can call it as auto-start
+                new X();
+                for (int i = 0; i <= 10; i++) {
+                  System.out.println(i);
+                }
+              }
+            
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            0
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            run begin
+            run end
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 19</h3>
+          <pre>
+            class Y extends Thread {
+              Y() {
+                start();
+              }
+            
+              @Override
+              public void run() {
+                System.out.println("run begin");
+                System.out.println("run end");
+              }
+            }
+            
+            public class M29 {
+              public static void main(String[] args) {
+                System.out.println(1);
+                // while creating the thread itself it is stating in the constructor
+                // we can call it as auto-start
+                Y y1 = new Y();
+                // Exception we are calling start 2 times.
+                y1.start();
+                System.out.println(2);
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            1
+            Exception in thread "main" run begin
+            run end
+            java.lang.IllegalThreadStateException
+                    at java.lang.Thread.start(Thread.java:710)
+                    at M29.main(M29.java:22)
+      </pre>
+        </article>
+        <article class="topic">
+          <h3 class="topic-title" id="introduction">Program No. 20</h3>
+          <pre>
+            class Z extends Thread {
+              Z() {
+                start();
+              }
+            
+              @Override
+              public void run() {
+                System.out.println("run begin");
+                // child thread receiving abnormal condition
+                start();
+                System.out.println("run end");
+              }
+            }
+            
+            public class M30 {
+              public static void main(String[] args) {
+                System.out.println(1);
+                Z z1 = new Z();
+                System.out.println(2);
+              }
+            }
+            
+          </pre>
+          <br />
+          <pre class="output"><b>o/p: </b>
+            1
+            2
+            run begin
+            Exception in thread "Thread-0" java.lang.IllegalThreadStateException
+                    at java.lang.Thread.start(Thread.java:710)
+                    at Z.run(M30.java:12)
+      </pre>
+        </article>
+
+        <!-- Add more articles for other topics -->
+      </section>
+    </main>
+    <!-- notes body end -->
+
+    <!-- content-divider -->
+    <div class="content-divider"></div>
+    <!-- end of content divider -->
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="section-center">
+        <div class="social-icons">
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+          <!-- social icon -->
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <!-- end of social icon -->
+        </div>
+        <p class="footer-text">
+          &copy;
+          <span class="text-primary">vijays programming 2024</span>
+          all rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="./google-code-prettify/prettify.js"
+    ></script>
+  </body>
+</html>
