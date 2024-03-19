@@ -1,0 +1,106 @@
+
+*
+{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+
+}
+
+.container
+{
+    width: 500px;
+    margin: 0 auto;
+    height: 70vh;
+    border: 0.001rem solid white;
+    /* padding-left: 1rem; */
+}
+
+.form
+{
+    padding-left: 1rem;
+}
+
+.custom-hr
+{
+    height: 1px;
+    width: 93%;
+    background-color: white;
+    margin: 15px auto;
+    padding-left: 0;
+
+}
+
+h1
+{
+   text-align: center; 
+   margin-bottom: 12px;
+}
+
+.label
+{
+    font-weight: bolder;
+    padding-left: 0.25rem;
+}
+
+input
+{
+    background-color: white;
+    border-radius: .5rem;
+    padding: 5px;
+}
+
+#FirstName
+{
+    margin-right: .5rem;
+}
+
+#FirstName,
+#LastName
+{
+    margin-top: .5rem;
+}
+
+#city
+{
+    margin-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+#street_address,
+#street_address_2
+{
+    width: 94%;
+    margin: .5rem 0;
+}
+
+#zip
+{
+    margin:.5rem 0;
+}
+
+#country
+{
+    color: black;
+    border: black;
+}
+
+#phone
+{
+    margin-right: .5rem;
+}
+
+
+#submit
+{
+    background-color: blue;
+    font-size: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    width: 6rem;
+    height: 3rem;
+    text-align: center;
+    font-weight: 600;
+    
+}
